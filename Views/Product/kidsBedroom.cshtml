@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+    
+    @{
+        Layout = "~/Views/Shared/Layout.cshtml";
+        }
+
+			<div class="body">
+				<div class="content-project">
+					<div>
+						<h3>Shoes</h3>
+					</div>
+					<div class="navigation">
+						<span>View:</span>
+						<ul>
+							<li class="selected">
+								
+                                @Html.ActionLink("All","projects","Product")
+							</li>
+							<li>
+								
+                                @Html.ActionLink("Shoes","livingRoom","Product")
+							</li>
+							<li>
+								
+                                @Html.ActionLink("Clothes","diningRoom","Product")
+							</li>
+							<li>
+								
+                                @Html.ActionLink("Jewellery","tonedBedroom","Product")
+							</li>
+							<li>
+								
+                                @Html.ActionLink("HandBags","kidsBedroom","Product")
+							</li>							
+						</ul>
+					</div>
+
+                                 
+        <div id="templatemo_content_right">
+            <table style="background-color:coral">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Price
+        </th>
+       
+        <th> Image</th>
+   
+@foreach (var item in Model) {
+    <tr>
+        <td>
+           @item.Id
+        </td>
+        <td>
+            @item.Price
+        </td>
+        
+        <td><img src="@item.Path.Substring(1)"/></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+
+        <td><a href="/Product/addtoCart1?id=@item.Id">Add To Cart</a></td>
+       
+    </tr>
+}
+
+</table>          
+        
+                        </div> 
+					
+					</div>
+				</div>
+			
+			</div>
+		
+

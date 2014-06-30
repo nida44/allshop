@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+	<title>Online SHopping Website</title>
+	<link rel="stylesheet" href="~/Content/style.css" type="text/css"/>
+    <link rel="stylesheet" href="~/Content/themes/style.css" type="text/css"/>
+       @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+</head>
+<body>
+
+    <div class="page">
+
+		<div class="about-page">
+          
+			<div class="sidebar">
+				
+				<ul>
+                    
+					<li class="home">
+						<a href="/Home/index">Home</a>
+					</li>
+					<li class="selected about">
+						<a href="/User/about">Login</a>
+					</li>
+					<li class="projects">
+						<a href="/Product/projects">Products</a>
+					</li>
+					<li class="blog">
+						<a href="/User/blog">Signup</a>
+					</li>
+					<li class="contact">
+						<a href="/Home/contact">Contact</a>
+					</li>
+                    <li class="blog">
+						<a href="/Product/getBill">Get Bill</a>
+					</li> 
+                    <li class="home">
+						<a href="/Home/logout">LogOut</a>
+					</li>
+                                    
+				</ul>
+                
+                      	</div>
+          		
+             
+                @RenderBody()
+            
+            
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+            
+
+                <div>
+				
+                </div>
+              </div>
+        </div>
+    
+          
+
+</body>
+</html>

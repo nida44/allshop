@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html> 
+@model EAD_Pro1.Models.Product  
+     @{
+        Layout = "~/Views/Shared/Layout.cshtml";
+        }
+
+   			<div class="body">
+				<div class="content-home">
+					<div>
+
+                        <h3>Fashion Dreamers ! Click to Hit Fashion</h3>
+                        <p>
+                            So, You dream to be a fashionist. Grab your favourite items here which makes you look more stylish and adorable. Its the place for fashion Dreamers. And Yes, Click To hit FASHION.
+						</p>
+                        <p></p>
+                        <p></p>
+                        <p></p>                     
+                        
+					</div>
+					<div>
+					<h1><label >Get Your Bill</label> </h1>    
+                     <form method="post" action="/Product/generateBill">
+                        <p class="p-container">
+                          <p style="color:red">@ViewBag.x</p>                       
+                        </p>
+
+                         <input type="submit" value="Get Bill">
+                         </form>
+                       
+                </div>				
+			</div>
+		</div>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>  
+ @{
+        Layout = "~/Views/Shared/Layout.cshtml";
+        }
+    
+			<div class="body">
+				<div class="content-home">
+					<div>
+
+                        <h3>Fashion Dreamers ! Click to Hit Fashion</h3>
+                       <p>
+                            So, You dream to be a fashionist. Grab your favourite items here which makes you look more stylish and adorable. Its the place for fashion Dreamers. And Yes, Click To hit FASHION.
+						</p>
+                        <h3>
+                           <br />ADMIN HOME
+                        </h3>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+
+        <div> 
+            <div>
+                
+ <table style="background-color:coral">
+    <tr>
+        <th>
+            ID
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Category
+        </th>
+        <th> Image</th>
+   
+@foreach (var item in Model) {
+    <tr>
+        <td>
+           @item.Id
+        </td>
+        <td>
+            @item.Price
+        </td>
+        <td>
+           @item.Category
+        </td>
+        <td><img src="@item.Path.Substring(1)"/></td>
+       
+    </tr>
+}
+
+</table>
+            </div> 
+		</div>								
+	</div>				
+</div>
+</div>
+    
+               

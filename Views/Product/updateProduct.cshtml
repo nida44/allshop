@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>   
+@model EAD_Pro1.Models.Product 
+    @{
+        Layout = "~/Views/Shared/Layout.cshtml";
+        }
+			<div class="body">
+				<div class="content-home">
+					<div>
+
+                        <h3>Fashion Dreamers ! Click to Hit Fashion</h3>
+                       <p>
+                            So, You dream to be a fashionist. Grab your favourite items here which makes you look more stylish and adorable. Its the place for fashion Dreamers. And Yes, Click To hit FASHION.
+						</p>
+                        <h3>
+                           <br />ADMIN HOME
+                        </h3>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+
+                   
+                           <form method="post" action="/Product/updateProduct1" enctype="multipart/form-data">
+                             @Html.AntiForgeryToken()
+                             @Html.ValidationSummary(true)
+                            <h1>Update Product</h1>
+                            <div class="inset">
+                            <p>
+                            <label for="id">ID of Product</label>
+                            <input type="text" name="i" id="i" style="color:red"/>
+                             @Html.ValidationMessageFor(model => model.Id)    
+                                                                               
+                            <label for="price">Price</label>
+                            <input type="text" name="p" id="p" style="color:red"/>
+                            @Html.ValidationMessageFor(model => model.Price) 
+
+                            <label for="Category">Category</label>
+                            <input type="text" name="c" id="c" style="color:red"/>
+                            @Html.ValidationMessageFor(model => model.Category) 
+
+                            </p>
+                            </div>
+                            <p class="p-container">
+               
+                            Upload Image: <input type="file" name="image" />
+                                <p></p>                                                                      
+
+                            <input type="submit" name="go" id="go" value="Upload">
+                            </p>
+                            </form>
+					
+                        
+
+                        
+					</div>				
+					
+				</div>
+				
+			</div>
+    @section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

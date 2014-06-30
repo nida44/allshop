@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html> 
+@model EAD_Pro1.Models.Product  
+     @{
+        Layout = "~/Views/Shared/Layout.cshtml";
+        }
+
+   			<div class="body">
+				<div class="content-home">
+					<div>
+
+                        <h3>Fashion Dreamers ! Click to Hit Fashion</h3>
+                        <p>
+                            So, You dream to be a fashionist. Grab your favourite items here which makes you look more stylish and adorable. Its the place for fashion Dreamers. And Yes, Click To hit FASHION.
+						</p>
+                        <p></p>
+                        <p></p>
+                        <p></p>                     
+                        
+					</div>
+					<div>
+					<h1><label >Enter Id of product to search</label> </h1>    
+                     <input  id="i" name="i" type="text"style="color:red" />
+                     <input type="button" value="Search" id="c5"/>
+                     <br/>
+                     <br/>
+                     <br/>
+                    <table id="t" style="background-color:coral">
+                        <tr></tr>
+                        <tr></tr>
+                        <tr></tr>
+                        <tr>
+                            <th>ID</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                    
+                            <th>Category</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        
+                            <th>Item Price</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+                    </table>
+                        <table id="t1" style="background-color:coral"></table>
+                    
+                    @Scripts.Render("~/bundles/jquery")
+                    <script>
+
+                        $(document).ready(function () {
+
+                            $('#c5').click(function () {
+
+                                var email = $('#i').val();
+
+                                $.getJSON("/Product/searchProduct1?email=" + email, function (data) {
+                                    $('#t1').empty();
+                                    $.each(data, function (item, i) {
+                                        
+                                        $('#t1').append(
+                                            '<tr> <td>' + i.Id + '</td> <td>' + i.Category + '</td> <td> ' + i.Price + '</td> </tr>');                                                                             
+
+                                    });
+
+                                });
+
+                            });
+                        });
+
+                </script>	
+                        
+                </div>				
+			</div>
+		</div>

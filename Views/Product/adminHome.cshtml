@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>   
+@model EAD_Pro1.Models.Product 
+    @{
+        Layout = "~/Views/Shared/Layout.cshtml";
+        }
+			<div class="body">
+				<div class="content-home">
+					<div>
+
+                        <h3>Fashion Dreamers ! Click to Hit Fashion</h3>
+                       <p>
+                            So, You dream to be a fashionist. Grab your favourite items here which makes you look more stylish and adorable. Its the place for fashion Dreamers. And Yes, Click To hit FASHION.
+						</p>
+                        <h3>
+                           <br />ADMIN HOME
+                        </h3>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        
+                        
+					</div>
+					<div class="featured">              
+						<img src="~/images/bed.jpg" alt="">
+					</div>
+                    <div>
+						<ul>
+							<li>
+                               
+								<a href="/Product/addProduct"><img src="~/images/hand5.jpg" alt=""></a> <span>
+                                     @Html.ActionLink("Add Product","addProduct","Product")
+                                   
+							</li>
+							<li>
+								<a href="/Product/updateProduct"><img src="~/images/project-gallery2.jpg" alt=""></a> <span>
+                                  
+                                @Html.ActionLink("Update Product","updateProduct","Product")
+							</li>
+							<li>
+								<a href="/Product/getProduct"><img src="~/images/project-gallery3.jpg" alt=""></a> <span>
+                                  
+                                    @Html.ActionLink("Get Product","getProduct","Product")
+							</li>	
+                            <li>
+								<a href="/Product/deleteProduct"><img src="~/images/dres.jpg" alt=""></a> <span>
+                                  
+                                    @Html.ActionLink("Delete Product","deleteProduct","Product")
+							</li>													
+						</ul>						
+					</div>
+					
+				</div>
+				
+			</div>
+		</div>

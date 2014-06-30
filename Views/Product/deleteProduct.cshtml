@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>   
+@model EAD_Pro1.Models.Product 
+    @{
+        Layout = "~/Views/Shared/Layout.cshtml";
+        }
+			<div class="body">
+				<div class="content-home">
+					<div>
+
+                        <h3>Fashion Dreamers ! Click to Hit Fashion</h3>
+                       <p>
+                            So, You dream to be a fashionist. Grab your favourite items here which makes you look more stylish and adorable. Its the place for fashion Dreamers. And Yes, Click To hit FASHION.
+						</p>
+                        <h3>
+                           <br />ADMIN HOME
+                        </h3>
+                        <p></p>
+                        <p></p>
+                        <p></p>
+
+                            @using (Html.BeginForm("deleteProduct1","Product",FormMethod.Post))
+                            {
+                                 @Html.AntiForgeryToken()
+                                 @Html.ValidationSummary(true)
+                               <h1>DELETE PRODUCT</h1>
+                            <div class="inset">
+                            <p>
+                           @Html.LabelFor(m=>m.Id)                                                                                                                                            
+                            @Html.TextBoxFor(m => m.Id, new  {id="Id", Name="Id",style="color:red" })
+                            @Html.ValidationMessageFor(model => model.Id) 
+                            
+                            </p>
+
+                            </div>
+                           
+
+                            <input type="submit" name="go" id="go" value="Delete">
+                            
+                            }
+   
+                             
+                              
+					</div>				
+					
+				</div>
+				
+			</div>
+    @section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
